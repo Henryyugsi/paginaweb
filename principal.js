@@ -42,12 +42,48 @@ app.get("/images/redessociales.jpg",(req,res)=>{
 app.get("/images/rigth.svg",(req,res)=>{
     res.status(200).sendFile(path.resolve(__dirname,'./images/rigth.svg'));
 });
+app.get("/images/iconopersona.jpg",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./images/iconopersona.jpg'));
+});
 //Enviamos la pagina principal
 app.get("/",(req,res)=>{
     res.status(200).sendFile(path.resolve(__dirname,'index.html'));
 });
 
-var server = http.listen(3000,()=>{
+var server = http.listen(8080,()=>{
     console.log("Servidor corriendo en el puerto:",
     server.address().port);
 })
+
+
+//Enviamos los datos del personal
+app.get("/personal/1",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal1.html'));
+});
+app.get("/personal/2",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal2.html'));
+});
+app.get("/personal/3",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal3.html'));
+});
+app.get("/personal/4",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal4.html'));
+});
+app.get("/personal/5",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal5.html'));
+});
+app.get("/personal/6",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal6.html'));
+});
+app.get("/personal/7",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal7.html'));
+});
+app.get("/personal/8",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal8.html'));
+});
+app.get("/personal/9",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal9.html'));
+});
+app.get("/personal/10",(req,res)=>{
+    res.status(200).sendFile(path.resolve(__dirname,'./html/personal10.html'));
+});
