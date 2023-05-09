@@ -7,31 +7,19 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-
+/*Barra de inicio*/
 .hero{
     width: 100%;
     height: 8vh;
     min-height: 100px;
-    max-height: 200px;
+    max-height: 150px;
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
     color: #ffffff;
 }
-.hero::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-    background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: -1;
-}
 .imagen_inicio{
-    width: 200px;
+    width: 150px;
 }
 .nav{
     --padding-container:0;
@@ -39,65 +27,62 @@ body{
     display: flex;
     align-items: center;
 }
-.nav_title{
-    font-weight: 300;
-}
 .nav_link{
     margin-left: auto;
     padding: 0;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
-    gap: 2em;
-    
+    gap: 2em;  
 }
 .nav_items{
     list-style: none;
-
 }
 .nav_links{
     color: #000000;
-
-}
-.nav_menu{
-    margin-left: auto;
-    cursor: pointer;
-    display: none;
-}
-.nav_img{
-    display: block;
-    width: 30px;
-}
-.nav_close{
-    display: var(--show,none);
 }
 
-/*Hero Container */
 
-.hero_container{
-    max-width: 800px;
-    --padding-container:0;
-    display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-    gap: 1em;
-    padding-bottom: 100px;
-    text-align: center;
+/*Promociones*/
+.promociones{
+    background-color: #fffffff3;
+    height: 500px;
 }
-.hero_title{
-    font-size: 3rem;
+
+.position {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-.hero_paragraph{
-    margin-bottom: 20px;
+
+.slider{
+    background-image: url(./../images/promocion1.jpg);
+    background-size: cover;
+    height: 60%;
+    width: 90%;
+    border-radius: 10px;
+    animation: animate 30s infinite linear;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
 }
-.cta{
-    display: inline-block;
-    background-color: #2091f9;
-    justify-self: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 30px;
+
+@keyframes animate {
+    
+    25%{
+        background-image: url(./../images/promocion1.jpg);
+        background-size: cover;
+    }
+    75%{
+        background-image: url(./../images/promocion2.jpg);
+        background-size: cover;
+      
+    }
+    100%{
+        background-image: url(./../images/promocion1.jpg);
+        background-size: cover;
+    }
+    
 }
 
 /*Price*/
@@ -182,64 +167,54 @@ body{
     color: var(--color-cta);
     font-size: large;
 }
-/*Promociones*/
-.promociones{
-    background-color: #fffffff3;
-    height: 500px;
-}
-
-.position {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.slider{
-    background-image: url(./../images/promocion1.jpg);
-    background-size: cover;
-    height: 60%;
-    width: 90%;
-    border-radius: 10px;
-    animation: animate 30s infinite linear;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
-}
-
-@keyframes animate {
-    
-    25%{
-        background-image: url(./../images/promocion1.jpg);
-        background-size: cover;
-    }
-    75%{
-        background-image: url(./../images/promocion2.jpg);
-        background-size: cover;
-      
-    }
-    100%{
-        background-image: url(./../images/promocion1.jpg);
-        background-size: cover;
-    }
-    
-}
 
 /*equipos */
 
 .equipos{
-    height: 300px;
-}
-
-.servicios{
-    height: 150px;
-    width: 250px;
+    height: 800px;
+    padding: 50px;
 }
 
 .imagenservicios{
-    width: 250px;
-    height: 150px;
+    width: 950px;
+    height: 650px;
+    text-align: center;
 }
 
+/*nuestros servicios*/
+.nuestrosservicios{
+    height: 450px;
+    background-color: #1D293F;
+}
+.nuestrosservicios_table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nuestrosservicios_element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #696871;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color_cta: #5454D4;
+    --color-items: #696871;
+}
+.nuestrosservicios_name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.nuestrosservicios_price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
 
 /*Personal*/
 .heropersonal{
