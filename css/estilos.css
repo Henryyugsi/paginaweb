@@ -43,6 +43,13 @@ body{
 
 /*Barra de inicio Celular*/
 @media screen and (max-width:480px) {
+    .nav_link{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 2em;  
+        padding-left: 50px;
+    }
     .nav_links{
         color: #e21010;
     }
