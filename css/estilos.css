@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 /*Barra de inicio*/
-.hero{
+.inicio{
     width: 100%;
     height: 8vh;
     min-height: 100px;
@@ -19,7 +19,8 @@ body{
     color: #ffffff;
 }
 .imagen_inicio{
-    width: 150px;
+    width: 350px;
+    padding-left: 100px;
 }
 .nav{
     --padding-container:0;
@@ -27,23 +28,24 @@ body{
     display: flex;
     align-items: center;
 }
-.nav_link{
+.inicio_link{
     margin-left: auto;
     padding: 0;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;  
+    padding-right: 100px;
 }
-.nav_items{
+.inicio_items{
     list-style: none;
 }
-.nav_links{
+.inicio_links{
     color: #000000;
 }
 
 
-/*Promociones*/
+/*Slider Imagenes Promociones*/
 .promociones{
     background-color: #fffffff3;
     height: 500px;
