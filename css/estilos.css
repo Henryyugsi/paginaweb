@@ -34,6 +34,15 @@ body{
     gap: 2em;  
     padding-left: 500px;
 }
+@media screen and (max-width:480px) {
+    .nav_link{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 2em;  
+        padding-left: 100px;
+    }
+}
 .nav_items{
     list-style: none;
 }
@@ -43,13 +52,6 @@ body{
 
 /*Barra de inicio Celular*/
 @media screen and (max-width:480px) {
-    .nav_link{
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        gap: 2em;  
-        padding-left: 50px;
-    }
     .nav_links{
         color: #e21010;
     }
@@ -61,6 +63,12 @@ body{
 .promociones{
     background-color: #fffffff3;
     height: 500px;
+}
+@media screen and (max-width:480px) {
+    .promociones{
+        background-color: #938e8ef3;
+        height: 400px;
+    }
 }
 
 .position {
@@ -98,6 +106,7 @@ body{
     }
     
 }
+
 
 /*Price*/
 .subtitle{
