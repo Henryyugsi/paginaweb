@@ -35,12 +35,8 @@ body{
     padding-left: 500px;
 }
 @media screen and (max-width:480px) {
-    .nav_link{
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: max-content;
-        gap: 2em;  
-        padding-left: 100px;
+    .nav_link{ 
+        padding-right: 100px;
     }
 }
 .nav_items{
