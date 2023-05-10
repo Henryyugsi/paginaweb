@@ -28,7 +28,7 @@ body{
     display: flex;
     align-items: center;
 }
-.inicio_link{
+.nav_link{
     margin-left: auto;
     padding: 0;
     display: grid;
@@ -37,10 +37,10 @@ body{
     gap: 2em;  
     padding-right: 100px;
 }
-.inicio_items{
+.nav_items{
     list-style: none;
 }
-.inicio_links{
+.nav_links{
     color: #000000;
 }
 
