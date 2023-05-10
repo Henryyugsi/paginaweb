@@ -23,19 +23,16 @@ body{
     padding-left: 100px;
 }
 .nav{
-    --padding-container:0;
     height: 100%;
     display: flex;
     align-items: center;
 }
 .nav_link{
-    margin-left: auto;
-    padding: 0;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;  
-    padding-right: 100px;
+    padding-left: 500px;
 }
 .nav_items{
     list-style: none;
