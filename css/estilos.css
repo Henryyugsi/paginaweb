@@ -7,52 +7,100 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-/*Barra de inicio PC Normal*/
-.inicio{
-    width: 100%;
-    height: 8vh;
-    min-height: 100px;
-    max-height: 150px;
-    position: relative;
-    display: grid;
-    grid-template-rows: 100px 1fr;
-    color: #ffffff;
-}
-.imagen_inicio{
-    width: 350px;
-    padding-left: 100px;
-}
-.nav{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.nav_link{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 2em;  
-    padding-left: 500px;
-}
-@media screen and (max-width:480px) {
-    .nav_link{ 
-        padding-right: 100px;
-    }
-}
-.nav_items{
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
-.nav_links{
-    color: #000000;
+nav{
+    background: #2fcdcd;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url() no-repeat; 
 }
 
-/*Barra de inicio Celular*/
-@media screen and (max-width:480px) {
-    .nav_links{
-        color: #e21010;
+@media (max-width:952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
     }
 }
 
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
 
 
 /*Slider Imagenes Promociones*/
@@ -60,16 +108,10 @@ body{
     background-color: #fffffff3;
     height: 500px;
 }
-@media screen and (max-width:480px) {
-    .promociones{
-        background-color: #938e8ef3;
-        height: 400px;
-    }
-}
 
 .position {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -81,9 +123,31 @@ body{
     width: 90%;
     border-radius: 10px;
     animation: animate 30s infinite linear;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
 }
+@media screen and (max-width:480px) {
+    .promociones{
+        background-color: #fffffff3;
+        height: 550px;
+    }
+    .position {
+        position: relative;
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%,-50%);
+        margin-left: 100px;
+    }
+    .slider{
+        background-image: url(./../images/promocion1.jpg);
+        background-size: cover;
+        height: 60%;
+        width: 200%;
+        border-radius: 10px;
+        animation: animate 30s infinite linear;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
+    }
+}
+
 
 @keyframes animate {
     
